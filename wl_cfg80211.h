@@ -29,6 +29,7 @@
 #define _wl_cfg80211_h_
 
 #include <linux/wireless.h>
+#include <linux/sched/clock.h>
 #include <typedefs.h>
 #include <ethernet.h>
 #include <wlioctl.h>

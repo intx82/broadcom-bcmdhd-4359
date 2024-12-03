@@ -53,6 +53,8 @@
 #include <linux/reboot.h>
 #include <linux/notifier.h>
 #include <linux/irq.h>
+#include <linux/sched/clock.h>
+
 #if defined(CONFIG_TIZEN)
 #include <linux/net_stat_tizen.h>
 #endif /* CONFIG_TIZEN */
@@ -2963,7 +2965,7 @@ _dhd_set_multicast_list(dhd_info_t *dhd, int ifidx)
 }
 
 int
-_dhd_set_mac_address(dhd_info_t *dhd, int ifidx, uint8 *addr, bool skip_stop)
+_dhd_set_mac_address(dhd_info_t *dhd, int ifidx, const uint8 *addr, bool skip_stop)
 {
 	int ret;
 
